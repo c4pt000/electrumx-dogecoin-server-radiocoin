@@ -1,3 +1,23 @@
+ 
+ ```
+ yum install python3-plyvel.x86_64 -y
+ pip3 install aiorpcx attrs pylru aiohttp
+ mkdir /var/electrumx-db
+ python3 setup.py install
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 .. image:: https://travis-ci.org/spesmilo/electrumx.svg?branch=master
     :target: https://travis-ci.org/spesmilo/electrumx
 .. image:: https://coveralls.io/repos/github/spesmilo/electrumx/badge.svg
