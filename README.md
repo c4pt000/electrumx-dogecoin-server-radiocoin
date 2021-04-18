@@ -1,3 +1,11 @@
+ for docker-dogecoind-full 50GB 
+ 
+ * 04-16-2021 sync
+ 
+ docker run -it -d -p 22555:22555 -p 22556:22556 c4pt/dogecoind-current-full
+ 
+ docker exec -it <docker_vm_hash> bash
+ 
  
  ```
  yum install python3-plyvel.x86_64 -y
@@ -12,7 +20,7 @@ place in /root/.bashrc
 source /root/.bashrc
 ---------------------------------------------
 
-
+--> also set /etc/electrum-doge.conf
 
 export DB_DIRECTORY=/var/electrumx-db
 export DAEMON_URL=http://rpcuser:yourpasswordhere@127.0.0.1:22555/
