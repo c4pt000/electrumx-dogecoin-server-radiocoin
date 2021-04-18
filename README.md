@@ -1,3 +1,6 @@
+ ![s1](https://raw.githubusercontent.com/c4pt000/electrum-wallet-for-dogecoin/master/donate-about-deposit.png)
+
+ 
  for docker-dogecoind-full 50GB 
  
  * 04-16-2021 sync
