@@ -1238,6 +1238,25 @@ class DogecoinTestnet(Dogecoin):
                     '4d7049f45189db5664f3c4d07350559e')
 
 
+class Radiocoin(AuxPowMixin, Coin):
+    NAME = "Radiocoin"
+    SHORTNAME = "RADC"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("02facafd")
+    XPRV_VERBYTES = bytes.fromhex("02fac398")
+    P2PKH_VERBYTE = bytes.fromhex("1e")
+    P2SH_VERBYTES = (bytes.fromhex("16"),)
+    WIF_BYTE = bytes.fromhex("9e")
+    GENESIS_HASH =  ('000007ce46e6c59844c34fa7ba5b27c8'
+		     'dac0653a27fcfb7340cc0158849e4afd')
+    TX_COUNT = 27583427
+    TX_COUNT_HEIGHT = 1604979
+    TX_PER_BLOCK = 20
+    REORG_LIMIT = 2000
+    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
+
+
+
 # Source: https://github.com/dashpay/dash
 class Dash(Coin):
     NAME = "Dash"
