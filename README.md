@@ -29,6 +29,9 @@ export DB_DIRECTORY=/var/electrumx-db
 export DAEMON_URL=http://rpcuser:yourpasswordhere@127.0.0.1:22555/
 export COIN=Dogecoin
 export ALLOW_ROOT=YES
+export SERVICES=tcp://:50001,ssl://:50002,wss://:50004,rpc://
+export REPORT_SERVICES=tcp://sv.yourip.com:50001,ssl://sv.yourip.com:50002,wss://sv.yourip.com:50004
+
 ```
 as root: or electrumx user 
 
