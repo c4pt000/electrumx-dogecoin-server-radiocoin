@@ -1220,6 +1220,7 @@ class Dogecoin(AuxPowMixin, Coin):
     WIF_BYTE = bytes.fromhex("9e")
     GENESIS_HASH = ('1a91e3dace36e2be3bf030a65679fe82'
                     '1aa1d6ef92e7c9902eb318182c355691')
+    PEER_DEFAULT_PORTS = {'t':'50001', 's':'50002', 'h':'8181', 'g':'8182'}
     TX_COUNT = 27583427
     TX_COUNT_HEIGHT = 1604979
     TX_PER_BLOCK = 20
@@ -1244,16 +1245,28 @@ class Radiocoin(AuxPowMixin, Coin):
     NET = "mainnet"
     XPUB_VERBYTES = bytes.fromhex("02facafd")
     XPRV_VERBYTES = bytes.fromhex("02fac398")
-    P2PKH_VERBYTE = bytes.fromhex("1e")
+    P2PKH_VERBYTE = bytes.fromhex("3c")
     P2SH_VERBYTES = (bytes.fromhex("16"),)
     WIF_BYTE = bytes.fromhex("9e")
     GENESIS_HASH =  ('000007ce46e6c59844c34fa7ba5b27c8'
 		     'dac0653a27fcfb7340cc0158849e4afd')
-    TX_COUNT = 27583427
-    TX_COUNT_HEIGHT = 1604979
-    TX_PER_BLOCK = 20
-    REORG_LIMIT = 2000
+#   TX_COUNT = 27583427
+    RPC_PORT = 9332
+    PEER_DEFAULT_PORTS = {'t':'50001', 's':'50002'}
+    TX_COUNT = 10000
+    TX_COUNT_HEIGHT = 10000
+    TX_PER_BLOCK = 1
+    REORG_LIMIT = 200
+    MAX_SUBS = 250000
+        #Maximum number of address subscriptions across all sessions
+    MAX_SESSION_SUBS = 50000
+        #Maximum number of address subscriptions permitted to a single session.
+    MAX_SEND = 5000000
+    BANDWIDTH_LIMIT = 100000000
+    SESSION_TIMEOUT = 1800
+    MAX_SESSIONS = 2000
     DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
+
 
 
 

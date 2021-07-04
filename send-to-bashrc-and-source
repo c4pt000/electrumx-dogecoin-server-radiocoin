@@ -1,0 +1,15 @@
+export DB_DIRECTORY=/var/electrumx-db
+#export DAEMON_URL=http://rpcuser:be3098bcc69d25028a821e229a13953@127.0.0.1:22556/
+export DAEMON_URL=http://root:rpcpassword@127.0.0.1:9332/
+#export COIN=Dogecoin
+export COIN=Radiocoin
+export NET=mainnet
+export REORG_LIMIT=100
+export REQUEST_TIMEOUT=30
+export SESSION_TIMEOUT=600
+export PEER_DISCOVERY=self
+export ALLOW_ROOT=YES
+export SERVICES=tcp://127.0.0.1:50001,ssl://127.0.0.1:50002,wss://127.0.0.1:50004,rpc://
+#export REPORT_SERVICES=tcp://127.0.0.1:50001,ssl://127.0.0.1:50002,wss://127.0.0.1:50004
+export SSL_CERTFILE=/home/c4pt/opt/electrumx-dogecoin-server-radiocoin/server.crt
+export SSL_KEYFILE=/home/c4pt/opt/electrumx-dogecoin-server-radiocoin/server.key
