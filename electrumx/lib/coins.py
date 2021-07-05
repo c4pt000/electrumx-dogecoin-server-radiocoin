@@ -280,7 +280,7 @@ class Coin:
 
 
 class AuxPowMixin:
-    STATIC_BLOCK_HEADERS = False
+    STATIC_BLOCK_HEADERS = True
     DESERIALIZER = lib_tx.DeserializerAuxPow
     SESSIONCLS = AuxPoWElectrumX
     TRUNCATED_HEADER_SIZE = 80
@@ -1238,7 +1238,7 @@ class DogecoinTestnet(Dogecoin):
     GENESIS_HASH = ('bb0a78264637406b6360aad926284d54'
                     '4d7049f45189db5664f3c4d07350559e')
 
-
+#    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
 class Radiocoin(AuxPowMixin, Coin):
     NAME = "Radiocoin"
     SHORTNAME = "RADC"
@@ -1250,23 +1250,16 @@ class Radiocoin(AuxPowMixin, Coin):
     WIF_BYTE = bytes.fromhex("9e")
     GENESIS_HASH =  ('000007ce46e6c59844c34fa7ba5b27c8'
 		     'dac0653a27fcfb7340cc0158849e4afd')
-#   TX_COUNT = 27583427
     RPC_PORT = 9332
-    PEER_DEFAULT_PORTS = {'t':'50001', 's':'50002'}
     TX_COUNT = 10000
     TX_COUNT_HEIGHT = 10000
-    TX_PER_BLOCK = 1
-    REORG_LIMIT = 200
-    MAX_SUBS = 250000
-        #Maximum number of address subscriptions across all sessions
-    MAX_SESSION_SUBS = 50000
-        #Maximum number of address subscriptions permitted to a single session.
-    MAX_SEND = 5000000
-    BANDWIDTH_LIMIT = 100000000
-    SESSION_TIMEOUT = 1800
-    MAX_SESSIONS = 2000
-    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
-
+    TX_PER_BLOCK = 10
+    REORG_LIMIT = 2000
+    PEER_DEFAULT_PORTS = {'t':'50001', 's':'50002', 'h':'8181', 'g':'8182'}
+    PEERS = [
+        '172.104.241.226 s50002 t50001',
+        '104.237.145.126 s50002 t50001',
+    ]
 
 
 
