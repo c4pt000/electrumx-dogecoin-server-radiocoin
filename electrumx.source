@@ -1,5 +1,4 @@
 #export ELECTRUMX = dir-to/electrumx_server
-#DONATION_ADDRESS = 
 
 export DB_DIRECTORY=/var/electrumx-db
 export DB_ENGINE=leveldb
@@ -19,6 +18,7 @@ export SSL_CERTFILE=/etc/server.crt
 export SSL_KEYFILE=/etc/server.key
 export DAEMON_VERSION=radiocoin-electrumX-for.2.2.1
 export BANNER_FILE=/etc/banner.txt
+export DONATION_ADDRESS=DMq9mjF2BpWA9EZhMcpMmi6voVXiBMJY9B
 #export ANON_LOGS=whats a log
 
 

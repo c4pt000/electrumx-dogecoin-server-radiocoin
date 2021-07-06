@@ -280,7 +280,7 @@ class Coin:
 
 
 class AuxPowMixin:
-    STATIC_BLOCK_HEADERS = True
+    STATIC_BLOCK_HEADERS = False
     DESERIALIZER = lib_tx.DeserializerAuxPow
     SESSIONCLS = AuxPoWElectrumX
     TRUNCATED_HEADER_SIZE = 80
@@ -1225,7 +1225,9 @@ class Dogecoin(AuxPowMixin, Coin):
     TX_COUNT_HEIGHT = 1604979
     TX_PER_BLOCK = 20
     REORG_LIMIT = 2000
-    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
+
+# dont use
+#    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
 
 
 class DogecoinTestnet(Dogecoin):
@@ -1238,7 +1240,9 @@ class DogecoinTestnet(Dogecoin):
     GENESIS_HASH = ('bb0a78264637406b6360aad926284d54'
                     '4d7049f45189db5664f3c4d07350559e')
 
-    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
+# dont use
+#    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
+
 class Radiocoin(AuxPowMixin, Coin):
     NAME = "Radiocoin"
     SHORTNAME = "RADC"
@@ -1250,13 +1254,15 @@ class Radiocoin(AuxPowMixin, Coin):
     WIF_BYTE = bytes.fromhex("9e")
     GENESIS_HASH =  ('000007ce46e6c59844c34fa7ba5b27c8'
 		     'dac0653a27fcfb7340cc0158849e4afd')
-    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
-    RPC_PORT = 9332
+    ESTIMATE_FEE = 1.000
+    RELAY_FEE = 1.000
+    DAEMON = daemon.FakeEstimateFeeDaemon
     TX_COUNT = 10000
     TX_COUNT_HEIGHT = 10000
     TX_PER_BLOCK = 1
-    REORG_LIMIT = 200
-    PEER_DEFAULT_PORTS = {'t':'50001', 's':'50002'}
+
+#    DESERIALIZER = lib_tx.DeserializerSegWit
+#    DESERIALIZER = lib_tx.Deserializer
 
 class RadiocoinTestnet(Radiocoin):
     NAME = "Radiocoin"
@@ -1269,7 +1275,7 @@ class RadiocoinTestnet(Radiocoin):
     WIF_BYTE = bytes.fromhex("f1")
     GENESIS_HASH =  ('00000a2ee9363d21e47bc10d5b1e39d4'
                      'ae4bd950491790e522f90dad86d2d1eb')
-    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
+    DESERIALIZER = lib_tx.DeserializerAuxPow
 
 
 
