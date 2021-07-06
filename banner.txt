@@ -1,0 +1,8 @@
+connected to electrumX-radiocoin
+bitcoin Donation address: 1MxdqrDRu97BNG9n17e8jejBwAUUxRCLhy
+dogecoin Donation address: DMq9mjF2BpWA9EZhMcpMmi6voVXiBMJY9B
+Radiocoin Core 1.14-6.0.1-paper-fix
+run your own copy
+https://github.com/c4pt000/electrum-doge-server
+
+https://github.com/c4pt000/electrum-wallet-radc
