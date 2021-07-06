@@ -1,6 +1,14 @@
 
 place files in add-files where they go 
 
+* 07-06-2021
+# PAPER wallet import works with radiocoin-electrum-4.1.4
+![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/just-the-right-QR-code-ignore-the-left.png)
+# leave random deposit address and just import the QR on the right side of the crypto-currency bill (with the camera logo icon) 
+* requires "pip3 install python-zbar" ? and uvcvideo and web cam support
+* set default camera in "General" Preferences
+![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/electrum-import-paper-QR-radiodollar.png)
+![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/radio-electrum-4.1.4.paper-sweep.png)
  
  ```
  yum install python3-plyvel.x86_64 -y
