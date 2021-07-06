@@ -1,0 +1,6 @@
+connected to electrumX-radiocoin
+Donation address: $DONATION_ADDRESS
+ElectrumX-Radiocoin $DAEMON_VERSION
+
+run your own copy
+https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin

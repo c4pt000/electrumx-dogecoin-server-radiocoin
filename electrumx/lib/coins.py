@@ -1238,7 +1238,7 @@ class DogecoinTestnet(Dogecoin):
     GENESIS_HASH = ('bb0a78264637406b6360aad926284d54'
                     '4d7049f45189db5664f3c4d07350559e')
 
-#    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
+    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
 class Radiocoin(AuxPowMixin, Coin):
     NAME = "Radiocoin"
     SHORTNAME = "RADC"
@@ -1250,16 +1250,27 @@ class Radiocoin(AuxPowMixin, Coin):
     WIF_BYTE = bytes.fromhex("9e")
     GENESIS_HASH =  ('000007ce46e6c59844c34fa7ba5b27c8'
 		     'dac0653a27fcfb7340cc0158849e4afd')
+    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
     RPC_PORT = 9332
     TX_COUNT = 10000
     TX_COUNT_HEIGHT = 10000
-    TX_PER_BLOCK = 10
-    REORG_LIMIT = 2000
-    PEER_DEFAULT_PORTS = {'t':'50001', 's':'50002', 'h':'8181', 'g':'8182'}
-    PEERS = [
-        '172.104.241.226 s50002 t50001',
-        '104.237.145.126 s50002 t50001',
-    ]
+    TX_PER_BLOCK = 1
+    REORG_LIMIT = 200
+    PEER_DEFAULT_PORTS = {'t':'50001', 's':'50002'}
+
+class RadiocoinTestnet(Radiocoin):
+    NAME = "Radiocoin"
+    SHORTNAME = "XRADC"
+    NET = "testnet"
+    XPUB_VERBYTES = bytes.fromhex("043587cf")
+    XPRV_VERBYTES = bytes.fromhex("04358394")
+    P2PKH_VERBYTE = bytes.fromhex("71")
+    P2SH_VERBYTES = [bytes.fromhex("c4")]
+    WIF_BYTE = bytes.fromhex("f1")
+    GENESIS_HASH =  ('00000a2ee9363d21e47bc10d5b1e39d4'
+                     'ae4bd950491790e522f90dad86d2d1eb')
+    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
+
 
 
 
