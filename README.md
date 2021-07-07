@@ -1,5 +1,18 @@
 
-place files in add-files where they go 
+
+fedora 34
+will not send a TX while running from docker use the installer natively instead 
+```
+docker run -it --net host -d -e "DISPLAY=${DISPLAY:-:0.0}" -v /tmp/.X11-unix:/tmp/.X11-unix fedora:34
+
+# (fedora 34)
+
+cd /opt
+ yum install git nano wget -y
+ git clone https://github.com/c4pt000/electrum-radiocoin-4.0.0b-current
+ cd electrum-radiocoin-4.0.0b-current/
+ sh install-radiocoin-electrum.sh 
+```
 
 * 07-06-2021
 # PAPER wallet import works with radiocoin-electrum-4.1.4
