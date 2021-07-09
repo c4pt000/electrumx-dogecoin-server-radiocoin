@@ -1,4 +1,6 @@
-# m h  dom mon dow   command
+# check file electrum-radc-server
+
+
 @reboot radiocoind
 @reboot /usr/bin/electrum-radc-server
 
