@@ -1,0 +1,14 @@
+# m h  dom mon dow   command
+@reboot radiocoind
+@reboot /usr/bin/electrum-radc-server
+
+#every 8 hrs reset radiocoind and electrumx
+* */8 * * * /usr/bin/reset-electrumx-server
+
+
+
+
+
+
+
+
