@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+killall python3
+radiocoin-cli stop
+sleep 5s
+radiocoind 
+/usr/bin/electrum-radc-server &
+
