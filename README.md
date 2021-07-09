@@ -1,9 +1,10 @@
-for crontab
+for crontab -e (crontab-stuff goes in crontab -e )
 
+```
 https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4/blob/main/crontab-stuff
 https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4/blob/main/electrum-radc-server
 https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4/blob/main/reset-electrumx-server
-
+```
 
 
 
