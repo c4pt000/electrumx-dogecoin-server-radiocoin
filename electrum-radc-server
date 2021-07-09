@@ -1,0 +1,10 @@
+#!/bin/bash
+
+
+# this goes in -> /usr/bin/electrum-radc-server
+# where /opt/electrumx-dogecoin-server-radiocoin-4.1.4 is the electrumx-server
+
+
+cd /opt/electrumx-dogecoin-server-radiocoin-4.1.4
+source electrumx.source
+./electrumx_server 
