@@ -10,7 +10,14 @@ https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4/blob/main/r
 
 # (fedora 34)
 
-copy server.* and banner.txt to /etc
+create ssl cert in /etc
+```
+ openssl genrsa -out server.key 2048
+ openssl req -new -key server.key -out server.csr
+ openssl x509 -req -days 1825 -in server.csr -signkey server.key -out server.crt
+```
+edit banner.txt
+copy banner.txt to /etc
 mkdir /var/electrumx-db
 edit electrumx.source
 change rpc and remote ip
@@ -54,19 +61,14 @@ export DONATION_ADDRESS=DMq9mjF2BpWA9EZhMcpMmi6voVXiBMJY9B
 ```
 
 
-create ssl cert in /opt/electrumx-dogecoin-server/
-```
- openssl genrsa -out server.key 2048
- openssl req -new -key server.key -out server.csr
- openssl x509 -req -days 1825 -in server.csr -signkey server.key -out server.crt
-```
+
 
 
 
 as root: or electrumx user 
 
 cd /
-
+source electrumx.source
 electrumx_server
 
 See `readthedocs <https://electrumx-spesmilo.readthedocs.io/>`_.
