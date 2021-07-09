@@ -67,10 +67,17 @@ export DONATION_ADDRESS=DMq9mjF2BpWA9EZhMcpMmi6voVXiBMJY9B
 
 
 as root: or electrumx user 
+if not already in the bashrc
 
-cd /
+```
+echo "ulimit -n 10000" >> ~/.bash_profile
+source ~/.bash_profile
+```
+
+cd /opt/electrumx-dogecoin-server-radiocoin-4.1.4
 source electrumx.source
-electrumx_server
+python3 -m pip install .
+./electrumx_server
 
 See `readthedocs <https://electrumx-spesmilo.readthedocs.io/>`_.
 
