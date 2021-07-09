@@ -5,35 +5,51 @@ https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4/blob/main/e
 https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4/blob/main/reset-electrumx-server
 
 
-fedora 34
-<br>
-will not send a TX while running from docker use the installer natively instead 
-```
-docker run -it --net host -d -e "DISPLAY=${DISPLAY:-:0.0}" -v /tmp/.X11-unix:/tmp/.X11-unix fedora:34
+
 
 # (fedora 34)
 
-cd /opt
- yum install git nano wget -y
- git clone https://github.com/c4pt000/electrum-radiocoin-4.0.0b-current
- cd electrum-radiocoin-4.0.0b-current/
- sh install-radiocoin-electrum.sh 
-```
+copy server.* and banner.txt to /etc
+mkdir /var/electrumx-db
+edit electrumx.source
+change rpc and remote ip
 
-* 07-06-2021
-# PAPER wallet import works with radiocoin-electrum-4.1.4
-![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/just-the-right-QR-code-ignore-the-left.png)
-# leave random deposit address and just import the QR on the right side of the crypto-currency bill (with the camera logo icon) 
-* requires "pip3 install python-zbar" ? and uvcvideo and web cam support
-* set default camera in "General" Preferences
-![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/electrum-import-paper-QR-radiodollar.png)
-![s1](https://raw.githubusercontent.com/c4pt000/radiocoin/master/radio-electrum-4.1.4.paper-sweep.png)
- 
- ```
- yum install python3-plyvel.x86_64 -y
- pip3 install aiorpcx attrs pylru aiohttp
- mkdir /var/electrumx-db
- python3 setup.py install
+change 172.104.64.180 to your FQDN and rpcuser:yourpasswordhere to radiocoin.conf
+
+
+```
+#export ELECTRUMX = dir-to/electrumx_server
+
+export DB_DIRECTORY=/var/electrumx-db
+export DB_ENGINE=leveldb
+
+export COST_SOFT_LIMIT=0
+export COST_HARD_LIMIT=0
+
+
+export DAEMON_URL=http://rpcuser:yW70pssqLGVeqbjekl@127.0.0.1:9332/
+export COIN=Radiocoin
+
+export ALLOW_ROOT=YES
+
+export PEER_DISCOVERY=ON
+
+export SERVICES=tcp://172.104.64.180:50001,ssl://172.104.64.180:50002,wss://172.104.64.180:50004,rpc://
+export REPORT_SERVICES=tcp://172.104.64.180:50001,ssl://172.104.64.180:50002,wss://172.104.64.180:50004
+export MAX_SESSIONS=2000
+export CACHE_MB=1800
+export SSL_CERTFILE=/etc/server.crt
+export SSL_KEYFILE=/etc/server.key
+export DAEMON_VERSION=radiocoin-electrumX-for.2.2.1
+export BANNER_FILE=/etc/banner.txt
+export DONATION_ADDRESS=DMq9mjF2BpWA9EZhMcpMmi6voVXiBMJY9B
+#export ANON_LOGS=whats a log
+
+
+# cp server.* /etc
+# cp banner.txt /etc
+#echo "ulimit -n 10000" >> ~/.bash_profile
+# source ~/.bash_profile
 ```
 
 
@@ -43,18 +59,8 @@ create ssl cert in /opt/electrumx-dogecoin-server/
  openssl req -new -key server.key -out server.csr
  openssl x509 -req -days 1825 -in server.csr -signkey server.key -out server.crt
 ```
-change radioblockchain.info to your FQDN and rpcuser:yourpasswordhere to radiocoin.conf
-```
-DB_DIRECTORY=/var/electrumx-db
-DAEMON_URL=http://rpcuser:yourpasswordhere@127.0.0.1:9332/
-COIN=Radiocoin
-ALLOW_ROOT=YES
-export SERVICES=tcp://:50001,ssl://:50002,wss://:50004,rpc://
-export REPORT_SERVICES=tcp://radioblockchain.info:50001,ssl://radioblockchain.info:50002,wss://radioblockchain.info:50004
-SSL_CERTFILE=/opt/electrumx-dogecoin-server/server.crt
-SSL_KEYFILE=/opt/electrumx-dogecoin-server/server.key
 
-```
+
 
 as root: or electrumx user 
 
