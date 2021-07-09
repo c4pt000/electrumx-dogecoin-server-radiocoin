@@ -1,3 +1,8 @@
+for crontab
+
+https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4/blob/main/crontab-stuff
+https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4/blob/main/electrum-radc-server
+https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4/blob/main/reset-electrumx-server
 
 
 fedora 34
