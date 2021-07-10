@@ -16,6 +16,9 @@ https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4/blob/main/r
 ```
 
 # DATABASE CURRENT ~ blockchain height -> 3,806,538  https://live.blockcypher.com/doge/block/8f3f9f4e1a853bc5fee844a902af6841ca6dc616945d71d78de500d18463765c/
+
+# current database for dogecoin electrum -> https://drive.google.com/file/d/1OOAickW0Oax2LHVA_486YGiCrc0P_NMl/view
+
 ```
 #current database for dogecoin electrum -> https://drive.google.com/file/d/1OOAickW0Oax2LHVA_486YGiCrc0P_NMl/view
 unpack in / 
