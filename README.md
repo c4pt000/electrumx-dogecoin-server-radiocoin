@@ -15,7 +15,7 @@ https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4/blob/main/e
 https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4/blob/main/reset-electrumx-server
 ```
 
-# DATABASE CURRENT
+# DATABASE CURRENT ~ blockchain height -> 3,806,538
 ```
 #current database for dogecoin electrum -> https://drive.google.com/file/d/1OOAickW0Oax2LHVA_486YGiCrc0P_NMl/view
 unpack in / 
