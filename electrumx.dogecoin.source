@@ -1,5 +1,7 @@
 #export ELECTRUMX = dir-to/electrumx_server
 
+
+#current database for dogecoin electrum -> https://drive.google.com/file/d/1OOAickW0Oax2LHVA_486YGiCrc0P_NMl/view
 export DB_DIRECTORY=/home/c4pt/Desktop/var/electrumx-doge-db
 export DB_ENGINE=leveldb
 #export DB_ENGINE=rocksdb
