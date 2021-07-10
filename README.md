@@ -15,7 +15,14 @@ https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4/blob/main/e
 https://github.com/c4pt000/electrumx-dogecoin-server-radiocoin-4.1.4/blob/main/reset-electrumx-server
 ```
 
-
+# DATABASE CURRENT
+```
+#current database for dogecoin electrum -> https://drive.google.com/file/d/1OOAickW0Oax2LHVA_486YGiCrc0P_NMl/view
+unpack in / 
+unpacks as /home/c4pt/Desktop/var/electrumx-doge-db
+points to ->export DB_DIRECTORY=/home/c4pt/Desktop/var/electrumx-doge-db
+move dir and change this line ^ to where electrumx-doge-db directory lives on the drive
+```
 
 # (fedora 34)
 
