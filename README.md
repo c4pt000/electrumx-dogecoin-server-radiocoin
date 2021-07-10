@@ -44,7 +44,7 @@ change rpc and remote ip
 
 change 172.104.64.180 to your FQDN and rpcuser:yourpasswordhere to radiocoin.conf
 
-electrumx.source -> radiocoin
+# electrumx.source -> radiocoin
 ```
 #export ELECTRUMX = dir-to/electrumx_server
 
@@ -80,7 +80,7 @@ export DONATION_ADDRESS=DMq9mjF2BpWA9EZhMcpMmi6voVXiBMJY9B
 # source ~/.bash_profile
 ```
 
-electrumx.doge.source -> dogecoin
+# electrumx.doge.source -> dogecoin
 
 ```
 #export ELECTRUMX = dir-to/electrumx_server
