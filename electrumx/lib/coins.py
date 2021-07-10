@@ -1220,14 +1220,16 @@ class Dogecoin(AuxPowMixin, Coin):
     WIF_BYTE = bytes.fromhex("9e")
     GENESIS_HASH = ('1a91e3dace36e2be3bf030a65679fe82'
                     '1aa1d6ef92e7c9902eb318182c355691')
-    PEER_DEFAULT_PORTS = {'t':'50001', 's':'50002', 'h':'8181', 'g':'8182'}
-    TX_COUNT = 27583427
+    ESTIMATE_FEE = 0.50
+    RELAY_FEE = 0.50
+    DAEMON = daemon.FakeEstimateFeeDaemon
+    TX_COUNT = 927583427
     TX_COUNT_HEIGHT = 1604979
     TX_PER_BLOCK = 20
-    REORG_LIMIT = 2000
+#    REORG_LIMIT = 2000
 
 # dont use
-#    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
+    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
 
 
 class DogecoinTestnet(Dogecoin):
@@ -1241,7 +1243,7 @@ class DogecoinTestnet(Dogecoin):
                     '4d7049f45189db5664f3c4d07350559e')
 
 # dont use
-#    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
+    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
 
 class Radiocoin(AuxPowMixin, Coin):
     NAME = "Radiocoin"
