@@ -1,5 +1,5 @@
 
-for electrum-radiocoin wallet
+ for electrum-radiocoin wallet
 https://github.com/c4pt000/electrum-radiocoin
 
 for crontab -e (crontab-stuff goes in crontab -e )
