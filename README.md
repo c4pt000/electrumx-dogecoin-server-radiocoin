@@ -1,6 +1,11 @@
 
  for electrum-radiocoin wallet
+
 https://github.com/c4pt000/electrum-radiocoin
+
+for electrum-dogecoin wallet
+
+https://github.com/c4pt000/electrum-dogecoin
 
 for crontab -e (crontab-stuff goes in crontab -e )
 
