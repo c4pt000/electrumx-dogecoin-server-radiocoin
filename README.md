@@ -7,6 +7,10 @@ for electrum-dogecoin wallet
 
 https://github.com/c4pt000/electrum-dogecoin
 
+for electrum-uraniumx
+
+https://github.com/c4pt/electrum-uraniumx
+
 for crontab -e (crontab-stuff goes in crontab -e )
 
 ```
