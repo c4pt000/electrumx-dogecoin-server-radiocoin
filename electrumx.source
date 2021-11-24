@@ -3,7 +3,11 @@
 export DB_DIRECTORY=/var/electrumx-db
 export DB_ENGINE=leveldb
 
-export DAEMON_URL=http://rpcuser:yW70pssqLGVeqbjekl@127.0.0.1:9332/
+export COST_SOFT_LIMIT=0
+export COST_HARD_LIMIT=0
+
+
+export DAEMON_URL=http://rpcuser:rpcpassword@127.0.0.1:9332/
 export COIN=Radiocoin
 
 export ALLOW_ROOT=YES

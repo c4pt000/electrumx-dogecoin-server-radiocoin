@@ -1,0 +1,32 @@
+#export ELECTRUMX = dir-to/electrumx_server
+
+export DB_DIRECTORY=/var/electrumx-db-rvl
+export DB_ENGINE=leveldb
+
+export COST_SOFT_LIMIT=0
+export COST_HARD_LIMIT=0
+
+
+export DAEMON_URL=http://rpcuser:yW70pssqLGVeqbje11@127.0.0.1:9334/
+export COIN=Ravencoin
+
+export ALLOW_ROOT=YES
+
+export PEER_DISCOVERY=ON
+
+export SERVICES=tcp://172.104.64.180:50011,ssl://172.104.64.180:50022,wss://172.104.64.180:50044,rpc://172.104.64.180
+export REPORT_SERVICES=tcp://172.104.64.180:50011,ssl://172.104.64.180:50022,wss://172.104.64.180:50044
+export MAX_SESSIONS=2000
+export CACHE_MB=1800
+export SSL_CERTFILE=/etc/server.crt
+export SSL_KEYFILE=/etc/server.key
+export DAEMON_VERSION=ravencoin-lite-electrumX-for.2.6.1
+export BANNER_FILE=/etc/banner.txt
+export DONATION_ADDRESS=bc1qy5r0qevexn6tgmteqxz69s3rqppvd27uf9fnes
+#export ANON_LOGS=whats a log
+
+
+# cp server.* /etc
+# cp banner.txt /etc
+#echo "ulimit -n 10000" >> ~/.bash_profile
+# source ~/.bash_profile

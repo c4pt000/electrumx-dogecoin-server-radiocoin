@@ -1220,11 +1220,14 @@ class Dogecoin(AuxPowMixin, Coin):
     WIF_BYTE = bytes.fromhex("9e")
     GENESIS_HASH = ('1a91e3dace36e2be3bf030a65679fe82'
                     '1aa1d6ef92e7c9902eb318182c355691')
-    PEER_DEFAULT_PORTS = {'t':'50001', 's':'50002', 'h':'8181', 'g':'8182'}
-    TX_COUNT = 27583427
-    TX_COUNT_HEIGHT = 1604979
-    TX_PER_BLOCK = 20
+    PEER_DEFAULT_PORTS = {'t':'50011', 's':'50022', 'h':'8181', 'g':'8182'}
+    TX_COUNT = 10000
+    TX_COUNT_HEIGHT = 10000
+    TX_PER_BLOCK = 1            
     REORG_LIMIT = 2000
+    ESTIMATE_FEE = 1.000
+    RELAY_FEE = 1.000
+    DAEMON = daemon.FakeEstimateFeeDaemon
 
 # dont use
 #    DESERIALIZER = lib_tx.DeserializerAuxPowSegWit
@@ -1277,6 +1280,7 @@ class RadiocoinTestnet(Radiocoin):
                      'ae4bd950491790e522f90dad86d2d1eb')
     DESERIALIZER = lib_tx.DeserializerAuxPow
 
+#    DESERIALIZER = lib_tx.Deserializer
 
 
 
@@ -3153,7 +3157,7 @@ class Ritocoin(Coin):
         import x21s_hash
         return x21s_hash.getPoWHash(header)
 
-
+#ravencoinlite replacement
 class Ravencoin(Coin):
     NAME = "Ravencoin"
     SHORTNAME = "RVN"
@@ -3162,16 +3166,23 @@ class Ravencoin(Coin):
     XPRV_VERBYTES = bytes.fromhex("0488ADE4")
     P2PKH_VERBYTE = bytes.fromhex("3C")
     P2SH_VERBYTES = (bytes.fromhex("7A"),)
-    GENESIS_HASH = ('0000006b444bc2f2ffe627be9d9e7e7a'
-                    '0730000870ef6eb6da46c8eae389df90')
+    WIF_BYTE = bytes.fromhex("80")
+    GENESIS_HASH = ('000000cdb10fc01df7fba251f2168ef7'
+		    'cd7854b571049db4902c315694461dd0')
+   # GENESIS_HASH = ('0000006b444bc2f2ffe627be9d9e7e7a'
+   #                 '0730000870ef6eb6da46c8eae389df90')
     DESERIALIZER = lib_tx.DeserializerSegWit
     X16RV2_ACTIVATION_TIME = 1569945600   # algo switch to x16rv2 at this timestamp
     KAWPOW_ACTIVATION_TIME = 1588788000  # kawpow algo activation time
     KAWPOW_ACTIVATION_HEIGHT = 1219736
     KAWPOW_HEADER_SIZE = 120
-    TX_COUNT = 5626682
-    TX_COUNT_HEIGHT = 887000
-    TX_PER_BLOCK = 6
+  #  TX_COUNT = 5626682
+  #  TX_COUNT_HEIGHT = 887000
+  #  TX_PER_BLOCK = 6
+    TX_COUNT = 10000
+    TX_COUNT_HEIGHT = 10000
+    TX_PER_BLOCK = 1
+
     RPC_PORT = 8766
     REORG_LIMIT = 100
     PEERS = [

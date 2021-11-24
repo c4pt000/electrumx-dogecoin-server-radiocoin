@@ -1,0 +1,5 @@
+/usr/local/lib/python3.9/site-packages/e_x-1.16.0-py3.9.egg
+/usr/local/bin/electrumx_compact_history
+/usr/local/bin/electrumx_rpc
+/usr/local/bin/electrumx_server
+/usr/local/bin/chardetect
