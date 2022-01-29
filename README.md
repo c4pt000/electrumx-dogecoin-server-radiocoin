@@ -138,3 +138,17 @@ python3 -m pip install .
 
 See `readthedocs <https://electrumx-spesmilo.readthedocs.io/>`_.
 
+
+
+
+
+# Cron script to compact the database
+# cat /usr/bin/comp-doge
+
+```
+cd /ext-doges
+export DB_DIRECTORY=/home/c4pt/Desktop/var/electrumx-doge-db
+export COIN=Dogecoin
+./electrumx_compact_history
+
+```
